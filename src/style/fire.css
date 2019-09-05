@@ -2,10 +2,9 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  margin-top: 200px;
 }
-.fire:hover {
-  transform: scale(1.2);
+.matches {
+  position: absolute;
 }
 .match {
   /*   animation: fire 1 infinite; */

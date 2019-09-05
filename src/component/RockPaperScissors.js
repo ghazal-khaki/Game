@@ -21,16 +21,18 @@ export default class RockPaperScissors extends React.Component {
         'PaperAndScissors',
         'ScissorsAndRock'
       ],
-      goalComponent: null
+      goalComponent: null,
+      announcerComponent: null
     }
   }
 
   announceWhoIsWinnerByComponent() {
-    return this.state.componentAnnouncers.find(
+    let announcerComponent = this.state.componentAnnouncers.find(
       item =>
         item.match(this.state.computerSelection) &&
         item.match(this.state.userSelection)
     )
+    this.setState({ announcerComponent: announcerComponent })
   }
 
   differenceBetweenSelections() {
@@ -95,11 +97,20 @@ export default class RockPaperScissors extends React.Component {
           </div>
           <Fire />
         </div>
+        <h3 if="result">{this.state.result}</h3>
         <div>
-          <RockAndPaper />
-          <PaperAndScissors />
-          <ScissorsAndRock />
-          <h3 if="result">{this.state.result}</h3>
+          {(() => {
+            switch (this.state.announcerComponent) {
+              case 'RockAndPaper':
+                return <RockAndPaper />
+              case 'PaperAndScissors':
+                return <PaperAndScissors />
+              case 'ScissorsAndRock':
+                return <ScissorsAndRock />
+              default:
+                return <div></div>
+            }
+          })()}
         </div>
       </div>
     )

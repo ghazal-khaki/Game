@@ -10,7 +10,7 @@ export default class Fire extends React.Component {
   render() {
     return (
       <div className="fire" onClick={this.answerIsFire.bind(this)}>
-        <div>
+        <div className="matches">
           <div className="match"></div>
           <div className="match match-two"></div>
           <div className="match match-three"></div>

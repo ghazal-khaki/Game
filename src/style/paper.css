@@ -26,7 +26,7 @@
   margin-left: 74px;
   background-color: rgb(221, 193, 144);
   transform: skew(25deg, -5deg);
-  transition-origin: 50% 50%;
+  /* transition-origin: 50% 50%; */
 }
 @keyframes paper {
   0% {
