@@ -1,0 +1,73 @@
+.parent-of-rock {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /* margin-top: -100px;
+  margin-left: 50px; */
+}
+.rock {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  transform-origin: center;
+  border-radius: 100% 80% 100% 90%;
+  background-image: linear-gradient(gray 20%, black 90%);
+  /* transform: skew(-45deg, 45deg); */
+  animation-name: rock;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.parent-of-rock:hover {
+  transform: scale(1.2);
+}
+
+@keyframes rock {
+  0% {
+    margin-left: 50px;
+
+    /* margin-left: 100px; */
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    margin-left: -100px;
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    margin-left: 50px;
+    /* margin-left: 100px; */
+  }
+  /* 50% {
+    margin-top: 100px;
+  }
+  60% {
+    margin-top: 50px;
+  }
+  70% {
+    margin-top: 100px;
+  }
+  80% {
+    margin-top: 150px;
+  }
+  90% {
+    margin-top: 100px;
+  }
+  100% {
+    margin-top: 150px;
+  } */
+  /*   55% { margin-top: 145px;}
+  60% { margin-top: 140px;
+}
+    70% { margin-top: 130px;
+}  
+  80% { margin-top: 120px;
+}  
+  90% { margin-top: 130px;
+}  
+  100% { margin-top: 150px;
+}   */
+}

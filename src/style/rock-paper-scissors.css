@@ -1,0 +1,12 @@
+.rock-paper-scissors {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.tools {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-width: 600px;
+  grid-template-columns: repeat(4, 1fr);
+}

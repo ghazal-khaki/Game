@@ -1,0 +1,90 @@
+.parent-of-scissors {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.parent-of-scissors:hover {
+  transform: scale(1.2);
+}
+.first {
+  animation-name: scissors;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.one {
+  width: 20px;
+  height: 70px;
+  background-image: linear-gradient(gray 0%, gray 60%, black 100%);
+  border-radius: 0% 50% 0% 0%;
+}
+.two {
+  width: 10px;
+  height: 40px;
+  background: rgb(151, 189, 199);
+  border: 10px solid red;
+  border-radius: 50% 0% 20% 50%;
+  margin-left: -20px;
+}
+.three {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: -75px;
+  margin-left: 5px;
+}
+.second {
+  margin-top: -65px;
+}
+.one2 {
+  width: 20px;
+  height: 70px;
+  background-image: linear-gradient(gray 0%, gray 60%, black 100%);
+  border-radius: 50% 0% 0% 0%;
+}
+.two2 {
+  width: 10px;
+  height: 40px;
+  background: rgb(151, 189, 199);
+  border: 10px solid red;
+  border-radius: 0% 50% 50% 20%;
+  margin-left: 10px;
+}
+.three2 {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: -75px;
+  margin-left: 5px;
+}
+/* .first:hover {
+  transition-duration: 2s;
+  transform-origin: 40% 70%;
+  transform: rotate(25deg)
+} */
+@keyframes scissors {
+  0% {
+    transition-duration: 2s;
+    transform-origin: 40% 70%;
+    transform: rotate(0deg);
+  }
+  50% {
+    transition-duration: 2s;
+    transform-origin: 40% 70%;
+    transform: rotate(25deg);
+  }
+  100% {
+    transition-duration: 2s;
+    transform-origin: 40% 70%;
+    transform: rotate(0deg);
+  }
+}
+/* .second:hover {
+  transition-duration: 2s;
+  transform-origin: 50% 50%;
+  transform: rotate(-15deg)
+} */
+/*
+.all:hover {
+} */

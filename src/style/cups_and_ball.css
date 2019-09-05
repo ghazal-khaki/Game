@@ -1,0 +1,143 @@
+body {
+  color: white;
+}
+.cups-and-ball {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.parent {
+  min-width: 500px;
+  min-height: 300px;
+  display: grid;
+  /* background-color: rgb(206, 154, 176); */
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.right {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(22, 88, 126);
+  margin: auto;
+  border-radius: 50%;
+  z-index: 500;
+}
+.cup {
+  position: relative;
+  margin-top: 2px;
+  margin-left: 29px;
+  width: 100px;
+  height: 80px;
+  background-color: rgb(63, 155, 124);
+  transform: rotate(85deg);
+}
+.cup2 {
+  position: relative;
+  margin-top: -80px;
+  width: 100px;
+  height: 80px;
+  background-color: rgb(63, 155, 124);
+  transform: rotate(-85deg);
+}
+.last {
+  position: relative;
+  width: 117px;
+  height: 20px;
+  background-color: rgb(22, 88, 126);
+  margin-top: -3px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background-color: rgb(63, 155, 124);
+}
+.all {
+  transform-origin: 50% 50%;
+}
+.all:hover {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 1s;
+}
+@-webkit-keyframes example {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Standard syntax */
+@keyframes example {
+  0% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+  10% {
+    transition-duration: 0.1s;
+    transform: rotate(-10deg);
+  }
+  20% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+  30% {
+    transition-duration: 0.1s;
+    transform: rotate(-10deg);
+  }
+  40% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+  50% {
+    transition-duration: 0.1s;
+    transform: rotate(-10deg);
+  }
+  60% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+  70% {
+    transition-duration: 0.1s;
+    transform: rotate(-10deg);
+  }
+  80% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+  90% {
+    transition-duration: 0.1s;
+    transform: rotate(-10deg);
+  }
+  100% {
+    transition-duration: 0.1s;
+    transform: rotate(10deg);
+  }
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(70, 13, 85);
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+.all-second {
+  transform-origin: 100% 100%;
+  transition-duration: 0.3s;
+  transform: rotate(30deg);
+}
+.circle-second {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(70, 13, 85);
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-left: 20px;
+}
