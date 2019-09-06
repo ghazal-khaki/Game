@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import RockPaperScissors from './RockPaperScissors'
+import { Link } from 'react-router-dom'
+import '../style/answer-is-fire.css'
 
 export default class AnswerIsFire extends React.Component {
   goToRockPaperScissors() {
@@ -22,9 +24,9 @@ export default class AnswerIsFire extends React.Component {
           friends fan? sorry! this project does not support Joey Tribbiani's
           rule maybe in next one!
         </p>
-        <button onClick={this.goToRockPaperScissors.bind(this)}>
-          <h3>get back to the game</h3>
-        </button>
+        <Link to="/rock-paper-scissors">
+          <button>get back to the game</button>
+        </Link>
       </div>
     )
   }

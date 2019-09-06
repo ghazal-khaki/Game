@@ -2,50 +2,62 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import CupsAndBall from './component/CupsAndBall'
 import RockPaperScissors from './component/RockPaperScissors'
-import './style/home.css'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import Home from './component/Home'
+import AnswerIsFire from './component/AnswerIsFire'
+import './style/index.css'
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      choose: null
-    }
+class Index extends React.Component {
+  Home() {
+    return <Home />
   }
-  goToRockPaperScissors() {
-    ReactDom.render(<RockPaperScissors />, document.getElementById('game'))
+  CupsAndBall() {
+    return <CupsAndBall />
   }
-  goToFlower() {
-    ReactDom.render(<CupsAndBall/>, document.getElementById('game'))
+  RockPaperScissors() {
+    return <RockPaperScissors />
+  }
+  AnswerIsFire() {
+    return <AnswerIsFire />
   }
   render() {
     return (
-      <div className="home">
-        <h1>Welcome</h1>
-        <p>
-          {' '}
-          choose each one of the games you want to play and play! you can find
-          manual of each game you want to know about bellow its button
-        </p>
-        <div className="options">
-          <button onClick={this.goToFlower.bind(this)}>Cups and Ball</button>
-          <button onClick={this.goToRockPaperScissors.bind(this)}>
-            Rock Paper Scissors
-          </button>
+      <Router>
+        <div className="index">
           <div>
-          <h3>Rules of Cups and Ball</h3>
-          <ul>
-            <li>there are two cups and one ball in one of them by random</li>
-            <li>you should choose any cups that you guess contains the ball</li>
-            <li>if you were right you win! and if you weren't you lose!</li>
-            <li>by clicking cups after end of game, new game starts!</li>
-          </ul>
-          <p>good luck!</p>
+            <div className="nav">
+              <Link to="/">
+                <button>Home</button>
+              </Link>
+              <Link to="/cups-and-ball">
+                <button>Cups and Ball</button>
+              </Link>
+              <Link to="/rock-paper-scissors">
+                <button>Rock Paper Scissors</button>
+              </Link>
+            </div>
+            <div className="components">
+              <Route exact path="/" component={Home}></Route>
+              <Route
+                exact
+                path="/cups-and-ball"
+                component={CupsAndBall}
+              ></Route>
+              <Route
+                exact
+                path="/rock-paper-scissors"
+                component={RockPaperScissors}
+              ></Route>
+              <Route
+                path="/rock-paper-scissors/fire"
+                component={AnswerIsFire}
+              ></Route>
+            </div>
           </div>
-          <p>say about another game</p>
         </div>
-      </div>
+      </Router>
     )
   }
 }
 
-ReactDom.render(<Home />, document.getElementById('game'))
+ReactDom.render(<Index />, document.getElementById('game'))

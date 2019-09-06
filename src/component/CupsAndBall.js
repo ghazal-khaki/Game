@@ -14,11 +14,11 @@ export default class CupsAndBall extends React.Component {
   checkTheAnswer() {
     let x = Math.floor(this.state.Ball * 100)
     if (x > 50 && this.state.chosenCup === 'One') {
-      this.setState({result: 'Congratulation! you win!'})
+      this.setState({ result: 'Congratulation! you win!' })
     } else if (x <= 50 && this.state.chosenCup === 'Two') {
-      this.setState({result: 'Congratulation! you win!'})
+      this.setState({ result: 'Congratulation! you win!' })
     } else {
-      this.setState({result: ' Ops! you lose, try again!'})
+      this.setState({ result: ' Ops! you lose, try again!' })
     }
   }
   setNewBall() {
@@ -46,9 +46,15 @@ export default class CupsAndBall extends React.Component {
     let cupClass = !this.state.click ? 'all' : 'all-second'
     let second = Math.floor(this.state.Ball * 100) <= 50 ? 'circle' : null
     let first = Math.floor(this.state.Ball * 100) <= 50 ? null : 'circle-second'
+    let resultMessage
+    if (this.state.result) {
+      resultMessage = <h3>{this.state.result}</h3>
+    } else {
+      resultMessage = <div></div>
+    }
     return (
       <div className="cups-and-ball">
-        <h1>Where is tha ball?</h1>
+        <h1>Where is the ball?</h1>
         <div className="parent">
           <div>
             <div onClick={this.chosenCupOne.bind(this)} className={cupClass}>
@@ -69,7 +75,7 @@ export default class CupsAndBall extends React.Component {
             <div className={second}> </div>
           </div>
         </div>
-        <h3 if="result">{this.state.result}</h3>
+        {resultMessage}
       </div>
     )
   }

@@ -1,84 +1,90 @@
-.fire {
+.parent-of-fire {
   display: grid;
   align-items: center;
   justify-items: center;
-  margin-top: 200px;
 }
-.fire:hover {
+
+.parent-of-fire:hover {
   transform: scale(1.2);
 }
+
 .match {
-  /*   animation: fire 1 infinite; */
   animation-name: fire;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  position: relative;
   width: 50px;
   height: 50px;
   background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
-  /*   border: 2px solid yellow; */
   transform: rotate(45deg);
   border-radius: 0% 90%;
-  /*   border: 15px solid yellow; */
 }
+
 .match-two {
   animation-name: fire;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  position: relative;
   width: 30px;
-  top: -45px;
-  left: 30px;
-  /*     background-image:linear-gradient(red 0%, orange 50%, yellow 100%); */
-  /*   border: 10px solid orange; */
+  height: 50px;
+  margin-top: -45px;
+  margin-left: 30px;
+  background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
+  transform: rotate(45deg);
+  border-radius: 0% 90%;
 }
+
 .match-three {
   animation-name: fire;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  position: relative;
   width: 30px;
-  top: -95px;
-  left: -10px;
+  height: 50px;
+  margin-top: -50px;
+  margin-left: -10px;
   transform: rotate(-45deg);
   border-radius: 90% 0%;
-  /*   background-image:linear-gradient(red 0%, orange 50%, yellow 100%); */
+  background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
 }
+
 .match-four {
   animation-name: firex;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  position: relative;
   width: 20px;
-  top: -145px;
-  left: 5px;
+  height: 50px;
   transform: rotate(-30deg);
   border-radius: 90% 0%;
+  margin-top: -50px;
+  margin-left: 5px;
+  background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
 }
+
 .match-five {
   animation-name: firex;
   animation-duration: 0.5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  position: relative;
   width: 20px;
-  top: -195px;
-  left: 25px;
+  height: 50px;
+  margin-top: -50px;
+  margin-left: 25px;
+  background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
   transform: rotate(-10deg);
   border-radius: 90% 0%;
 }
+
 .match-six {
   animation-name: fire;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   width: 30px;
   height: 30px;
-  top: -230px;
-  left: 10px;
+  margin-top: -35px;
+  margin-left: 10px;
+  background-image: linear-gradient(yellow 0%, orange 50%, red 100%);
+  transform: rotate(45deg);
+  border-radius: 0% 90%;
 }
-/* .one { */
 
-/*   animation-duration: 0.3s; */
-/* } */
 @keyframes fire {
   0% {
     background-image: linear-gradient(yellow 0%, orange 10%, red 100%);
@@ -102,10 +108,3 @@
     background-image: linear-gradient(yellow 0%, orange 90%, red 100%);
   }
 }
-
-/* .x {
-    width: 20px;
-    heigth:70px;
-    background-color: red;
-    background-image:linear-gradient(black 0%,gray 100%);
-  } */
