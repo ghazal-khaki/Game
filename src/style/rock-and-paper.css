@@ -11,15 +11,30 @@
   /*   transform:skew(-5deg,-35deg)rotate(-5deg); */
   /*   border: 0.2px solid orange;   */
   animation-name: paper-winner;
-  animation-duration: 1s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 @keyframes paper-winner {
-  100% {
+  0% {
+    margin-top: 0px;
+    transform: skew(45deg, 0deg);
+    background-color: rgb(221, 193, 144);
+    border-radius: 0;
+  }
+  50% {
     margin-top: 50px;
     transform: skew(0deg, 0deg);
     border-radius: 100% 80% 0% 0%;
-    background-image: linear-gradient(rgb(221, 193, 144) 60%, rgb(147, 122, 79) 100%);
+    background-image: linear-gradient(
+      rgb(221, 193, 144) 60%,
+      rgb(147, 122, 79) 100%
+    );
+  }
+  100% {
+    margin-top: 0px;
+    transform: skew(45deg, 0deg);
+    background-color: rgb(221, 193, 144);
+    border-radius: 0;
   }
 }
 .rock-loser {

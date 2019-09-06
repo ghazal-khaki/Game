@@ -12,9 +12,11 @@ class Home extends React.Component {
     }
   }
   goToRockPaperScissors() {
+    debugger
     ReactDom.render(<RockPaperScissors />, document.getElementById('game'))
   }
   goToFlower() {
+    debugger
     ReactDom.render(<CupsAndBall/>, document.getElementById('game'))
   }
   render() {

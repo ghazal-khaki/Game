@@ -32,6 +32,8 @@ export default class RockPaperScissors extends React.Component {
         item.match(this.state.computerSelection) &&
         item.match(this.state.userSelection)
     )
+    console.log(announcerComponent)
+    debugger
     this.setState({ announcerComponent: announcerComponent })
   }
 
@@ -53,6 +55,7 @@ export default class RockPaperScissors extends React.Component {
     } else {
       this.setState({ result: 'Congratulation! you win!' })
     }
+    debugger
     this.setState({ goalComponent: this.announceWhoIsWinnerByComponent() })
   }
 
@@ -67,11 +70,13 @@ export default class RockPaperScissors extends React.Component {
   }
 
   async answerIsPaper() {
+    debugger
     await this.setState({ userSelection: 'Paper' })
     this.checkWhoWin()
   }
 
   async answerIsRock() {
+    debugger
     await this.setState({ userSelection: 'Rock' })
     this.checkWhoWin()
   }
