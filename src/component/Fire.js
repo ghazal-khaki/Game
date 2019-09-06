@@ -12,11 +12,11 @@ export default class Fire extends React.Component {
       <div className="fire" onClick={this.answerIsFire.bind(this)}>
         <div className="matches">
           <div className="match"></div>
-          <div className="match match-two"></div>
-          <div className="match match-three"></div>
-          <div className="match match-four"></div>
-          <div className="match match-five"></div>
-          <div className="match match-six"></div>
+          <div className="match-two"></div>
+          <div className="match-three"></div>
+          <div className="match-four"></div>
+          <div className="match-five"></div>
+          <div className="match-six"></div>
         </div>
       </div>
     )
