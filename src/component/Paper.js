@@ -6,7 +6,7 @@ export default class Paper extends React.Component {
       <div>
         <div className="parent-of-paper">
           <div className="paper"></div>
-          <div className="gushe"></div>
+          <div className="corner"></div>
         </div>
       </div>
     )

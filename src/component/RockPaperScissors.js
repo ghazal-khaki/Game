@@ -9,7 +9,6 @@ import ScissorsAndRock from './ScissorsAndRock'
 import { Link } from 'react-router-dom'
 import '../style/rock-paper-scissors.css'
 
-// FIXME: add a button to clear data and play again
 export default class RockPaperScissors extends React.Component {
   constructor(props) {
     super(props)

@@ -36,8 +36,6 @@ export default class Home extends React.Component {
                   remember scissors wins paper by cutting it, paper wins rock by
                   covering it and rock wins scissors by crushing it
                 </li>
-                {/* TODO: write how to play again */}
-                <li>play again</li>
               </ul>
             </div>
           </div>
