@@ -1,11 +1,12 @@
-.fire {
+.parent-of-fire {
   display: grid;
   align-items: center;
   justify-items: center;
 }
-.matches {
-  position: absolute;
+.parent-of-fire:hover {
+  transform: scale(1.2);
 }
+
 .match {
   /*   animation: fire 1 infinite; */
   animation-name: fire;

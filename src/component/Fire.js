@@ -2,10 +2,9 @@ import React from 'react'
 import '../style/fire.css'
 
 export default class Fire extends React.Component {
-
   render() {
     return (
-      <div className="fire">
+      <div className="parent-of-fire">
         <div className="matches">
           <div className="match"></div>
           <div className="match-two"></div>

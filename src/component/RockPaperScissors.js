@@ -28,6 +28,15 @@ export default class RockPaperScissors extends React.Component {
     }
   }
 
+  async setNewGame() {
+    await this.setState({
+      announcerComponent: null,
+      userSelection: null,
+      result: null,
+      goalComponent: null,
+      computerSelection: null
+    })
+  }
   announceWhoIsWinnerByComponent() {
     let announcerComponent = this.state.componentAnnouncers.find(
       item =>
@@ -69,39 +78,59 @@ export default class RockPaperScissors extends React.Component {
   }
 
   async answerIsPaper() {
-    await this.setState({ userSelection: 'Paper' })
-    this.checkWhoWin()
+    if (this.state.userSelection === null) {
+      await this.setState({ userSelection: 'Paper' })
+      this.checkWhoWin()
+    }
   }
 
   async answerIsRock() {
-    await this.setState({ userSelection: 'Rock' })
-    this.checkWhoWin()
+    if (this.state.userSelection === null) {
+      await this.setState({ userSelection: 'Rock' })
+      this.checkWhoWin()
+    }
   }
 
   async answerIsScissors() {
-    await this.setState({ userSelection: 'Scissors' })
-    this.checkWhoWin()
+    if (this.state.userSelection === null) {
+      await this.setState({ userSelection: 'Scissors' })
+      this.checkWhoWin()
+    }
   }
 
   render() {
+    let matchState
+    if (this.state.result) {
+      matchState = (
+        <div className="resultTime">
+          <h3>{this.state.result}</h3>
+          <button onClick={this.setNewGame.bind(this)}>try again</button>
+        </div>
+      )
+    } else {
+      matchState = (
+        <div className="matchTime">
+          <h1>Choose your weapon!</h1>
+          <div className="tools">
+            <div onClick={this.answerIsPaper.bind(this)}>
+              <Paper />
+            </div>
+            <div onClick={this.answerIsRock.bind(this)}>
+              <Rock />
+            </div>
+            <div onClick={this.answerIsScissors.bind(this)}>
+              <Scissors />
+            </div>
+            <Link to="/rock-paper-scissors/fire">
+              <Fire />
+            </Link>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className="rock-paper-scissors">
-        <h1>Choose your weapon!</h1>
-        <div className="tools">
-          <div onClick={this.answerIsPaper.bind(this)}>
-            <Paper />
-          </div>
-          <div onClick={this.answerIsRock.bind(this)}>
-            <Rock />
-          </div>
-          <div onClick={this.answerIsScissors.bind(this)}>
-            <Scissors />
-          </div>
-          <Link to="/rock-paper-scissors/fire">
-            <Fire />
-          </Link>
-        </div>
-        <h3 if="result">{this.state.result}</h3>
+        {matchState}
         <div>
           {(() => {
             switch (this.state.announcerComponent) {
