@@ -7,8 +7,8 @@ export default class Home extends React.Component {
         <div className="home">
           <h1>Welcome</h1>
           <p>
-            choose each one of the games you want to play and play! you can find
-            manual of each game you want to know about bellow its button
+            Read the manual in bellow, choose game in menu and play. wish you be
+            winner! good luck!
           </p>
           <div className="Rules">
             <div>

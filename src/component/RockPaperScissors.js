@@ -6,6 +6,7 @@ import Fire from './Fire'
 import RockAndPaper from './RockAndPaper'
 import PaperAndScissors from './PaperAndScissors'
 import ScissorsAndRock from './ScissorsAndRock'
+import { Link } from 'react-router-dom'
 import '../style/rock-paper-scissors.css'
 
 // FIXME: add a button to clear data and play again
@@ -85,7 +86,7 @@ export default class RockPaperScissors extends React.Component {
   render() {
     return (
       <div className="rock-paper-scissors">
-        <h1>Choose!</h1>
+        <h1>Choose your weapon!</h1>
         <div className="tools">
           <div onClick={this.answerIsPaper.bind(this)}>
             <Paper />
@@ -96,7 +97,9 @@ export default class RockPaperScissors extends React.Component {
           <div onClick={this.answerIsScissors.bind(this)}>
             <Scissors />
           </div>
-          <Fire />
+          <Link to="/rock-paper-scissors/fire">
+            <Fire />
+          </Link>
         </div>
         <h3 if="result">{this.state.result}</h3>
         <div>

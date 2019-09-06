@@ -48,7 +48,7 @@ export default class CupsAndBall extends React.Component {
     let first = Math.floor(this.state.Ball * 100) <= 50 ? null : 'circle-second'
     return (
       <div className="cups-and-ball">
-        <h1>Where is tha ball?</h1>
+        <h1>Where is the ball?</h1>
         <div className="parent">
           <div>
             <div onClick={this.chosenCupOne.bind(this)} className={cupClass}>
