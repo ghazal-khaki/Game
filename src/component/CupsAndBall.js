@@ -43,9 +43,9 @@ export default class CupsAndBall extends React.Component {
     }
   }
   render() {
-    let cupClass = !this.state.click ? 'all' : 'all-second'
-    let second = Math.floor(this.state.Ball * 100) <= 50 ? 'circle' : null
-    let first = Math.floor(this.state.Ball * 100) <= 50 ? null : 'circle-second'
+    let cupClass = !this.state.click ? 'first-cup' : 'second-cup'
+    let second = Math.floor(this.state.Ball * 100) <= 50 ? 'second-place-for-ball' : null
+    let first = Math.floor(this.state.Ball * 100) <= 50 ? null : 'first-place-for-ball'
     let resultMessage
     if (this.state.result) {
       resultMessage = <h3>{this.state.result}</h3>
@@ -55,22 +55,22 @@ export default class CupsAndBall extends React.Component {
     return (
       <div className="cups-and-ball">
         <h1>Where is the ball?</h1>
-        <div className="parent">
+        <div className="parent-of-cups">
           <div>
             <div onClick={this.chosenCupOne.bind(this)} className={cupClass}>
-              <div className="right"></div>
-              <div className="cup"></div>
-              <div className="cup2"></div>
-              <div className="last"></div>
+              <div className="bottom-of-cup"></div>
+              <div className="right-side-of-cup"></div>
+              <div className="left-side-of-cup"></div>
+              <div className="top-of-cup"></div>
             </div>
             <div className={first}></div>
           </div>
           <div>
             <div onClick={this.chosenCupTwo.bind(this)} className={cupClass}>
-              <div className="right"></div>
-              <div className="cup"></div>
-              <div className="cup2"></div>
-              <div className="last"></div>
+              <div className="bottom-of-cup"></div>
+              <div className="right-side-of-cup"></div>
+              <div className="left-side-of-cup"></div>
+              <div className="top-of-cup"></div>
             </div>
             <div className={second}> </div>
           </div>

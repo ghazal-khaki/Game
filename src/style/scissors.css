@@ -8,20 +8,20 @@
   transform: scale(1.2);
 }
 
-.first {
+.first-pair-of-scissors {
   animation-name: scissors;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 
-.one {
+.blade-of-first-pair-of-scissors {
   width: 20px;
   height: 70px;
   background-image: linear-gradient(gray 0%, gray 60%, black 100%);
   border-radius: 0% 50% 0% 0%;
 }
 
-.two {
+.handle-of-first-pair-of-scissors {
   width: 10px;
   height: 40px;
   background: rgb(151, 189, 199);
@@ -30,7 +30,7 @@
   margin-left: -20px;
 }
 
-.three {
+.pin-of-scissors {
   width: 10px;
   height: 10px;
   background-color: red;
@@ -39,18 +39,18 @@
   margin-left: 5px;
 }
 
-.second {
+.second-pair-of-scissors {
   margin-top: -65px;
 }
 
-.one2 {
+.blade-of-second-pair-of-scissors {
   width: 20px;
   height: 70px;
   background-image: linear-gradient(gray 0%, gray 60%, black 100%);
   border-radius: 50% 0% 0% 0%;
 }
 
-.two2 {
+.handle-of-second-pair-of-scissors {
   width: 10px;
   height: 40px;
   background: rgb(151, 189, 199);

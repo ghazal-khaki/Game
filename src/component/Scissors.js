@@ -6,14 +6,14 @@ export default class Scissors extends React.Component {
     return (
       <div>
         <div className="parent-of-scissors">
-          <div className="first">
-            <div className="one"></div>
-            <div className="two"></div>
-            <div className="three"></div>
+          <div className="first-pair-of-scissors">
+            <div className="blade-of-first-pair-of-scissors"></div>
+            <div className="handle-of-first-pair-of-scissors"></div>
+            <div className="pin-of-scissors"></div>
           </div>
-          <div className="second">
-            <div className="one2"></div>
-            <div className="two2"></div>
+          <div className="second-pair-of-scissors">
+            <div className="blade-of-second-pair-of-scissors"></div>
+            <div className="handle-of-second-pair-of-scissors"></div>
           </div>
         </div>
       </div>
