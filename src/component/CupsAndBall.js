@@ -24,20 +24,18 @@ export default class CupsAndBall extends React.Component {
   setNewBall() {
     this.setState({ Ball: Math.random(), result: null, chosenCup: null })
   }
-  async chosenCupOne() {
+  chosenCupOne() {
     this.setState({ click: !this.state.click })
     if (!this.state.click) {
-      await this.setState({ chosenCup: 'One' })
-      this.checkTheAnswer()
+      this.setState({ chosenCup: 'One' }, () => this.checkTheAnswer())
     } else {
       this.setNewBall()
     }
   }
-  async chosenCupTwo() {
+  chosenCupTwo() {
     this.setState({ click: !this.state.click })
     if (!this.state.click) {
-      await this.setState({ chosenCup: 'Two' })
-      this.checkTheAnswer()
+      this.setState({ chosenCup: 'Two' }, () => this.checkTheAnswer())
     } else {
       this.setNewBall()
     }

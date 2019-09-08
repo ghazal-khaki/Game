@@ -27,8 +27,8 @@ export default class RockPaperScissors extends React.Component {
     }
   }
 
-  async setNewGame() {
-    await this.setState({
+  setNewGame() {
+    this.setState({
       announcerComponent: null,
       userSelection: null,
       result: null,
@@ -53,7 +53,6 @@ export default class RockPaperScissors extends React.Component {
   }
 
   checkWhoWin() {
-    this.computerResponse(this.state.userSelection)
     if (Math.abs(this.differenceBetweenSelections()) !== 1) {
       let LIFOBuffer = this.state.options.pop()
       this.state.options.unshift(LIFOBuffer)
@@ -66,34 +65,33 @@ export default class RockPaperScissors extends React.Component {
     this.setState({ goalComponent: this.announceWhoIsWinnerByComponent() })
   }
 
-  async computerResponse(removedField) {
+  computerResponse(removedField) {
     let computerOptions = this.state.options.filter(
       item => item !== removedField
     )
     let randomNumber = Math.floor(Math.random() * 2)
-    await this.setState({
-      computerSelection: computerOptions[randomNumber]
-    })
+    this.setState({ computerSelection: computerOptions[randomNumber] }, () =>
+      this.checkWhoWin()
+    )
   }
 
-  async answerIsPaper() {
+  answerIsPaper() {
     if (this.state.userSelection === null) {
-      await this.setState({ userSelection: 'Paper' })
-      this.checkWhoWin()
+      this.setState({ userSelection: 'Paper' }, () => this.computerResponse())
     }
   }
 
-  async answerIsRock() {
+  answerIsRock() {
     if (this.state.userSelection === null) {
-      await this.setState({ userSelection: 'Rock' })
-      this.checkWhoWin()
+      this.setState({ userSelection: 'Rock' }, () => this.computerResponse())
     }
   }
 
-  async answerIsScissors() {
+  answerIsScissors() {
     if (this.state.userSelection === null) {
-      await this.setState({ userSelection: 'Scissors' })
-      this.checkWhoWin()
+      this.setState({ userSelection: 'Scissors' }, () =>
+        this.computerResponse()
+      )
     }
   }
 
